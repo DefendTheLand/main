@@ -1,5 +1,7 @@
+"use strict";
+
 describe("Word Frequency", function() {
-    var main = require('/home/name/main/spec/main.js')
+    var main = require('./main.js')
 
 
     it('returns empty string given empty string',function(){

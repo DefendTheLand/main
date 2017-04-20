@@ -1,5 +1,3 @@
-"use strict";
-
 function main(words) {
     if(words!=='')
     {
