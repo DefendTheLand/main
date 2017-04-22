@@ -1,3 +1,5 @@
+"use strict";
+
 describe("Word Frequency", function() {
     var main = require('./main.js')
 
@@ -10,33 +12,33 @@ describe("Word Frequency", function() {
 
     it('returns string given one word',function()
     {
-        var result=main('he')
-        expect(result).toEqual('he 1')
+        var result=main('a')
+        expect(result).toEqual('a 1')
 
     })
 
     it('returns string given two different words',function()
     {
-        var result=main('he is')
-        expect(result).toEqual('he 1\r\nis 1')
+        var result=main('a b')
+        expect(result).toEqual('a 1\r\nb 1')
     })
 
     it('returns string given duplicated different words',function()
     {
-        var result=main('he is he')
-        expect(result).toEqual('he 2\r\nis 1')
+        var result=main('a b a')
+        expect(result).toEqual('a 2\r\nb 1')
     })
 
     it('returns string given duplicated different words need to be sorted',function()
     {
-        var result=main('he is is')
-        expect(result).toEqual('is 2\r\nhe 1')
+        var result=main('a b b')
+        expect(result).toEqual('b 2\r\na 1')
     })
 
     it('returns string given words splited by multiple spaces',function()
     {
-        var result=main('he   is')
-        expect(result).toEqual('he 1\r\nis 1')
+        var result=main('a   b')
+        expect(result).toEqual('a 1\r\nb 1')
     })
 
 
